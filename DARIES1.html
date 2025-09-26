@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciberseguridad 01</title>
+  <style>
+    :root {
+      --columbia-blue: #c1cfdaff;
+      --baby-blue: #92c1dfff;
+      --picton-blue: #62b2e4ff;
+      --celestial-blue: #20a4f3ff;
+      --vivid-sky-blue: #3dceeeff;
+      --fluorescent-cyan: #59f8e8ff;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--celestial-blue);
+      color: #181616;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #f4f4f4;
+    }
+
+    table {
+      width: 90%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      background-color: var(--columbia-blue);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+    }
+
+    thead {
+      background-color: var(--picton-blue);
+      color: #fff;
+      font-size: 18px;
+    }
+
+    th, td {
+      padding: 14px 18px;
+      text-align: center;
+      border: 1px solid var(--vivid-sky-blue);
+      font-size: 16px;
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--vivid-sky-blue);
+      color: #000;
+    }
+
+    tr:nth-child(odd) {
+      background-color: var(--baby-blue);
+      color: #000;
+    }
+
+    tr:hover {
+      background-color: var(--fluorescent-cyan);
+      color: #000;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    nav {
+      margin-top: 20px;
+      width: 100%;
+      height: 40px;
+      background-color: var(--picton-blue);
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ciberseguridad 01</h1>
+  <h2>Tipos de Malware</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tipo de Malware</th>
+        <th>Función</th>
+        <th>Impacto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Virus</td>
+        <td>Se copia en otros archivos y programas</td>
+        <td>Daños en archivos y sistema</td>
+      </tr>
+      <tr>
+        <td>Gusanos</td>
+        <td>Se distribuyen por la red sin intervención</td>
+        <td>Satura recursos y ralentiza la red</td>
+      </tr>
+      <tr>
+        <td>Caballo de Troya</td>
+        <td>Se oculta en programas aparentemente seguros</td>
+        <td>Robo de información, acceso remoto</td>
+      </tr>
+      <tr>
+        <td>Spyware</td>
+        <td>Monitorea la actividad del usuario en secreto</td>
+        <td>Exposición de datos personales</td>
+      </tr>
+      <tr>
+        <td>Adware</td>
+        <td>Muestra publicidad no deseada</td>
+        <td>Molestias y bajo rendimiento</td>
+      </tr>
+      <tr>
+        <td>Rootkit</td>
+        <td>Oculta procesos maliciosos</td>
+        <td>Acceso persistente y oculto</td>
+      </tr>
+      <tr>
+        <td>Keylogger</td>
+        <td>Registra las teclas presionadas</td>
+        <td>Robo de contraseñas y credenciales</td>
+      </tr>
+      <tr>
+        <td>Fileless Malware</td>
+        <td>Se ejecuta en memoria sin archivos</td>
+        <td>Ataques silenciosos difíciles de detectar</td>
+      </tr>
+      <tr>
+        <td>Cryptojacker</td>
+        <td>Usa recursos para minar criptomonedas</td>
+        <td>Consumo excesivo de CPU y energía</td>
+      </tr>
+      <tr>
+        <td>Botnet</td>
+        <td>Red de dispositivos comprometidos</td>
+        <td>Ataques DDoS, propagación de spam</td>
+      </tr>
+      <tr>
+        <td>Bomba lógica</td>
+        <td>Se activa al cumplirse una condición</td>
+        <td>Borrado o corrupción de datos</td>
+      </tr>
+      <tr>
+        <td>Wiper</td>
+        <td>Borra datos intencionalmente</td>
+        <td>Pérdida total de información</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <nav></nav>
+</body>
+</html>
