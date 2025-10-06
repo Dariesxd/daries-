@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Verde</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+  <style>
+    :root {
+      --fondo-verde-claro: #b2f5b2;      
+      --fondo-calculadora: #1e4026;      
+      --boton-verde: #34a853;            
+      --blanco: #ffffff;
+    }
+
+    body {
+      background-color: var(--fondo-verde-claro);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; 
+    }
+
+   
+    .navbar {
+      background-color: #2e7d32 !important;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .navbar a {
+      color: white !important;
+      font-weight: bold;
+    }
+
+    
+    .calc {
+      background-color: var(--fondo-calculadora);
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      margin-left: 100px; 
+    }
+
+    #ans {
+      width: 100%;
+      height: 60px;
+      border: none;
+      background: var(--blanco);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 25px;
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    .btn {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      justify-items: center;
+    }
+
+    .btn input[type="button"] {
+      width: 60px;
+      height: 50px;
+      border: none;
+      border-radius: 25px;
+      background: var(--boton-verde);
+      color: var(--blanco);
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn input[type="button"]:hover {
+      background: #66bb6a;
+      cursor: pointer;
+    }
+
+    .btn input[value="="] {
+      background-color: #2e7d32;
+    }
+
+    .btn input[value="="]:hover {
+      background-color: #4caf50;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">Inicio</a>
+    </div>
+  </nav>
+
+  <div class="calc">
+    <input type="text" id="ans" readonly />
+    <div class="btn">
+      <input type="button" value="C" onclick="Clear()" />
+      <input type="button" value="%" onclick="Solve('%')" />
+      <input type="button" value="←" onclick="Back()" />
+      <input type="button" value="/" onclick="Solve('/')" />
+
+      <input type="button" value="7" onclick="Solve('7')" />
+      <input type="button" value="8" onclick="Solve('8')" />
+      <input type="button" value="9" onclick="Solve('9')" />
+      <input type="button" value="x" onclick="Solve('*')" />
+
+      <input type="button" value="4" onclick="Solve('4')" />
+      <input type="button" value="5" onclick="Solve('5')" />
+      <input type="button" value="6" onclick="Solve('6')" />
+      <input type="button" value="-" onclick="Solve('-')" />
+
+      <input type="button" value="1" onclick="Solve('1')" />
+      <input type="button" value="2" onclick="Solve('2')" />
+      <input type="button" value="3" onclick="Solve('3')" />
+      <input type="button" value="+" onclick="Solve('+')" />
+
+      <input type="button" value="00" onclick="Solve('00')" />
+      <input type="button" value="0" onclick="Solve('0')" />
+      <input type="button" value="." onclick="Solve('.')" />
+      <input type="button" value="=" onclick="Result()" />
+    </div>
+  </div>
+
+  <script>
+    const Solve = (val) => {
+      document.getElementById("ans").value += val;
+    };
+
+    const Result = () => {
+      const v1 = document.getElementById("ans").value;
+      try {
+        const v2 = eval(v1);
+        document.getElementById("ans").value = v2;
+      } catch {
+        document.getElementById("ans").value = "Error";
+      }
+    };
+
+    const Clear = () => {
+      document.getElementById("ans").value = "";
+    };
+
+    const Back = () => {
+      const back = document.getElementById("ans");
+      back.value = back.value.slice(0, -1);
+    };
+  </script>
+</body>
+</html>
+
